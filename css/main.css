@@ -1,3 +1,31 @@
+/* roboto-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto-v30-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root {
+  --green-clr:rgb(30, 149, 155);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +34,12 @@
   box-sizing: border-box;
 }
 
-.container {
+body {
+  font-family: "Roboto";
+}
+
+.containers {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -23,4 +56,80 @@
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.header-top__btn {
+  border: 3px solid transparent;
+  transition: border 0.3s linear;
+}
+
+.header-top__btn:hover {
+  background-color: white;
+  color: #F05670;
+  border-color: #F05670;
+}
+
+.hero-section {
+  padding: 115px 0 70px;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+  max-width: 830px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-first {
+  margin-bottom: 10px;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 940px) {
+  swiper-container {
+    max-width: 500px;
+    height: 330px;
+  }
+  .swiper-first {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 560px) {
+  swiper-container {
+    max-width: 300px;
+    height: 210px;
+  }
+  .swiper-first {
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=main.css.map */
